@@ -8,6 +8,7 @@ connectDB();
 app.use(express.json({ extended: false }));
 
 app.use("/api/users", require("./routes/user"));
+app.use("/api/donation", require("./routes/donation"));
 
 
 const PORT = process.env.PORT || 5000;

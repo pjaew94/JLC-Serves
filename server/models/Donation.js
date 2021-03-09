@@ -1,4 +1,10 @@
 const { Schema, model } = require('mongoose');
+const mongoose = require('mongoose');
+const AutoIncrement = require('mongoose-sequence')(mongoose);
+const { DateTime } = require('luxon');
+
+var dt = DateTime.local()
+
 
 const DonationSchema = new Schema({
     amount: {
@@ -17,7 +23,7 @@ const DonationSchema = new Schema({
     },
     comment: [
         {
-            message: {
+            text: {
                 type: String,
                 required: true
             },
@@ -30,7 +36,14 @@ const DonationSchema = new Schema({
                 ref: 'users'
             }
         }
-    ]
+    ],
+    date: {
+        type: String,
+        default: dt.toLocaleString()
+    },
+
 });
+
+DonationSchema.plugin(AutoIncrement, { inc_field: 'donationCount'});
 
 module.exports = Donation = model('donation', DonationSchema);
