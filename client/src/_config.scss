@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&family=Rufina:wght@400;700&display=swap');
+
+// Colors
+$pink: #F78888;
+$yellow: #F3D250;
+$gray: #ECECEC;
+$softBlue: #90CCF4;
+$deepBlue: #5DA2D5;
+
+// Flex Mixin
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction;
+}
+
+// Font Mixin
+@mixin primary-font($size, $weight) {
+    font-family: 'Rufina', serif;
+    font-size: $size;
+    font-weight: $weight;
+    letter-spacing: 0.1rem;
+}
+
+@mixin secondary-font($size, $weight) {
+    font-family: 'Nunito', sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+}

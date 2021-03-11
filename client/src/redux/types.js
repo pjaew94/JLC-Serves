@@ -14,3 +14,6 @@ export const ADD_COMMENT = 'ADD_COMMENT';
 export const ADD_DONATION = 'ADD_DONATION';
 export const DONATION_ERROR = 'DONATION_ERROR';
 
+export const TOGGLE_KOREAN = 'TOGGLE_KOREAN';
+export const TOGGLE_ENGLISH = 'TOGGLE_ENGLISH'
+

@@ -1,0 +1,136 @@
+@import "../../../config";
+
+.achievements {
+    @include flex(center, center, row);
+    height: 40vh;
+    width: 100vw;
+    padding: 4% 10%;
+    background: #f4f8f7;
+    .achievements-subcontainer {
+        height: 100%;
+        width: 50%;
+        .achievement {
+            width: 50%;
+            height: 100%;
+            @include flex(flex-start, center, column);
+            padding:  5% 10%;
+            .number {
+              
+                @include primary-font(3rem, 400);
+                color: #efc86b;
+                margin-bottom: 10px;
+            }
+            .description {
+                height: 50%;
+                width: 70%;
+                @include secondary-font(0.9rem, 400);
+                color: #2f5349;
+                span {
+                    @include secondary-font(0.9rem, 700);
+                }
+            }
+        }
+
+        .meals,
+        .shoes,
+        .sleeping-bags {
+            border-right: 1px solid #2f5349;
+        }
+    }
+    .left-top-container {
+        @include flex(center, flex-end, row);
+    }
+    .right-bottom-container {
+        @include flex(center, flex-start, row);
+    }
+
+}
+
+
+@media only screen
+and (min-device-width: 1280px)
+and (max-device-width: 1480px) {
+    .achievements {
+        height: 35vh;
+        .achievements-subcontainer {
+            .achievement {
+                .number {
+                    font-size: 2.7rem;
+                }
+                .description {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 1080px)
+and (max-device-width: 1280px) {
+    .achievements {
+        height: 32vh;
+        .achievements-subcontainer {
+            .achievement {
+                .number {
+                    font-size: 2.2rem;
+                }
+                .description {
+                    font-size: 0.8rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1080px) {
+    .achievements {
+        height: 25vh;
+        .achievements-subcontainer {
+            height: 90%;
+            .achievement {
+                padding: 2% 5%;
+                .number {
+                    font-size: 2.2rem;
+                   
+                }
+                .description {
+                    font-size: 0.8rem;
+                    width: 100%;
+                    height:40%;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .achievements {
+        flex-direction: column;
+        height: 50vh;
+        padding: 8% 5%;
+        .achievements-subcontainer {
+            width: 100%;
+            height: 50%;
+            .achievement {
+                padding: 8%;
+                border: none;
+                .number {
+                    font-size: 2rem;
+                    margin-bottom: 2px;
+                }
+                .description {
+                    width: 100%;
+                    height: 60%;
+                }
+            }
+
+        }
+    }
+}
