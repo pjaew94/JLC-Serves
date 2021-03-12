@@ -2,39 +2,66 @@
 
 .achievements {
     @include flex(center, center, row);
-    height: 40vh;
     width: 100vw;
     padding: 4% 10%;
-    background: #f4f8f7;
+    background: $softWhite;
     .achievements-subcontainer {
         height: 100%;
         width: 50%;
+        position: relative;
         .achievement {
             width: 50%;
             height: 100%;
             @include flex(flex-start, center, column);
-            padding:  5% 10%;
+            padding:  5% 5% 5% 12%;
             .number {
               
-                @include primary-font(3rem, 400);
-                color: #efc86b;
+                @include primary-font(2.5rem, 700);
+                color: $mustardYellow;
                 margin-bottom: 10px;
             }
             .description {
                 height: 50%;
-                width: 70%;
-                @include secondary-font(0.9rem, 400);
-                color: #2f5349;
+                width: 80%;
+                @include secondary-font(0.8rem, 400);
+                color: $darkGreen;
                 span {
-                    @include secondary-font(0.9rem, 700);
+                    @include secondary-font(0.8rem, 700);
                 }
             }
         }
 
-        .meals,
-        .shoes,
-        .sleeping-bags {
-            border-right: 1px solid #2f5349;
+        .border-top {
+            position: absolute;
+            height: 1px;
+            width: 60px;
+            background: $darkGreen;
+            top: 0;
+            left: 0;
+        }
+        .border-left {
+            position: absolute;
+            width: 1px;
+            height: 100px;
+            background: $darkGreen;
+            top: 0;
+            left: 0;
+        }
+        .border-bottom {
+            position: absolute;
+            height: 1px;
+            width: 60px;
+            background: $darkGreen;
+            bottom: 0;
+            right: 0;
+        }
+        .border-right {
+            position: absolute;
+            width: 1px;
+            height: 100px;
+            background: $darkGreen;
+            bottom: 0;
+            right: 0;
         }
     }
     .left-top-container {
@@ -130,7 +157,12 @@ and (max-device-width: 767px) {
                     height: 60%;
                 }
             }
-
+            .border-top,
+            .border-bottom,
+            .border-right,
+            .border-left {
+                display: none;
+            }
         }
     }
 }

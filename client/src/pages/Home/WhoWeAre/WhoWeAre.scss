@@ -1,0 +1,155 @@
+@import "../../../config";
+
+.who-we-are {
+    @include flex(flex-start, flex-start, row);
+    height: auto;
+    width: 100vw;
+    padding: 2% 10%;
+    background: $softWhite;
+
+    .img-container {
+        width: 50%;
+        height: 100vh;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content {
+        @include flex(flex-start, center, column);
+        padding: 5%;
+        width: 50%;
+        height: 100vh;
+        .top {
+            @include flex(flex-start, flex-start, column);
+            width: 100%;
+            padding-bottom: 7%;
+            .who-we-are-text {
+                @include flex(flex-start, flex-start, row);
+                @include third-font(1rem, 700);
+                color: $mustardYellow;
+                letter-spacing: 0.2rem;
+                margin-bottom: 20px;
+            }
+            .we-are {
+                @include primary-font(2.3rem, 700);
+                color: $darkGreen;
+                span {
+                    border-bottom: 3px solid $mustardYellow;
+                    font-size: 2.3rem;
+                }
+            }
+        }
+        .middle {
+            @include flex(flex-start, flex-start, column);
+            width: 100%;
+            height: auto;
+            .middle-card {
+                width: 100%;
+                padding: 5% 0;
+                .subheading {
+                    @include primary-font(1.1rem, 700);
+                    color: $darkGreen;
+                    margin-bottom: 15px;
+                    span {
+                        font-size: 1.1rem;
+                        margin-right: 30px;
+                    }
+                }
+                .text {
+                    @include secondary-font(0.8rem, 400);
+                    color: #7e908a;
+                    line-height: 1.2rem;
+                }
+
+                .bible-verse {
+                    @include secondary-font(0.8rem, 400);
+                    color: #7e908a;
+                    line-height: 1.2rem;
+                    font-style: italic;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+    .who-we-are {
+        flex-direction: column;
+        .img-container {
+            width: 100%;
+            height: 30vh;
+            img {
+                object-position: 0 40%;
+            }
+        }
+        .content {
+            height: auto;
+            padding: 5% 0;
+            width: 100%;
+            .top {
+                padding: 0;
+            }
+            .middle {
+                width: 80%;
+                .middle-card {
+                    .subheading {
+                        font-size: 1.3rem;
+                    }
+                    .text {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .who-we-are {
+        flex-direction: column;
+        padding: 2% 0;
+        .img-container {
+            width: 100%;
+            height: 25vh;
+            img {
+                object-position: 0 40%;
+            }
+        }
+        .content {
+            height: auto;
+            padding: 5% 10%;
+            width: 100%;
+            .top {
+                padding: 0 0 8% 0;
+                .who-we-are-text {
+                    font-size: 0.8rem;
+                    margin-bottom: 10px;
+                }
+                .we-are {
+                    font-size: 1.8rem;
+                    span {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+            .middle {
+                width: 80%;
+                .middle-card {
+                    .subheading {
+                        font-size: 1.2rem;
+                    }
+                    .text {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

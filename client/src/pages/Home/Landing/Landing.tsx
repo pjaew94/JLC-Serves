@@ -71,7 +71,7 @@ const Landing: React.FC = () => {
           </div>
 
           <Link className="link donate-link" to="/donate">
-            DONATE NOW
+            DONATE
           </Link>
         </div>
       </div>

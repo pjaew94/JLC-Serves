@@ -5,7 +5,7 @@
     height: auto;
     width: 100%;
     padding: 4% 10% 4% 10%;
-    background: #31554b;
+    background: $darkGreen;
     .top {
         @include flex(flex-end, space-between, row);
         width: 100%;
@@ -34,6 +34,7 @@
                 span {
                     @include secondary-font(0.8rem, 300);
                     color: #d9e5e0;
+                    font-style: italic;
                 }
             }
             .verse-line2 {
@@ -53,46 +54,32 @@
                 border-left: 1px solid white;
             }
         }
-            .donate-link {
-                @include secondary-font(1.3rem, 700);
-                color: #d7b969;
-                &:after {
-                    display: block;
-                    content: "";
-                    border-bottom: 0.1rem solid #d7b969;
-                    transform: scaleX(1);
-                    transition: 0.5s all ease-in-out;
-                    transform-origin: 0% 50%;
-                }
-                &:hover:after {
-                    transform: scaleX(0);
-                }
+        .donate-link {
+            @include secondary-font(1.3rem, 700);
+            color: $mustardYellow;
+            border: 1px solid $mustardYellow;
+            padding: 15px 20px;
+            transition: 0.3s all ease-in-out;
+            &:hover {
+                background: $mustardYellow;
+                color: $darkGreen;
             }
         }
-    
+    }
 }
 
 .marquee-slider {
-    
-    height: 70vh;
+    height: 650px;
     width: 100vw;
-    background: #31554b;
+    background: $darkGreen;
+    border: none;
+    outline: none;
 }
 
-@media only screen
-and (max-device-height: 800px) {
-    .marquee-slider {
-    
-        height: 80vh;
-
-    }
-    
+@media only screen and (max-device-height: 800px) {
 }
 
-
-@media only screen
-and (min-device-width: 1080px)
-and (max-device-width: 1280px) {
+@media only screen and (min-device-width: 1080px) and (max-device-width: 1280px) {
     .landing {
         .top {
             .title {
@@ -105,9 +92,7 @@ and (max-device-width: 1280px) {
     }
 }
 
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1079px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1079px) {
     .landing {
         .top {
             .title {
@@ -136,9 +121,7 @@ and (max-device-width: 1079px) {
     }
 }
 
-@media only screen
-and (min-device-width: 425px)
-and (max-device-width: 767px) {
+@media only screen and (min-device-width: 425px) and (max-device-width: 767px) {
     .landing {
         padding: 8% 10% 5% 8%;
         .top {
@@ -172,14 +155,11 @@ and (max-device-width: 767px) {
         }
     }
     .marquee-slider {
-        height: auto;
-        padding-bottom: 10vh;
+        height: 550px;
     }
 }
 
-@media only screen
-and (min-device-width: 280px)
-and (max-device-width: 424px) {
+@media only screen and (min-device-width: 280px) and (max-device-width: 424px) {
     .landing {
         padding: 8% 10% 0 8%;
         .top {
