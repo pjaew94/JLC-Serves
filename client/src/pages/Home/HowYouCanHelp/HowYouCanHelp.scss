@@ -1,0 +1,101 @@
+@import '../../../config';
+
+.how-you-can-help {
+    @include flex(flex-start, flex-start, column);
+    width: 50%;
+    padding-left: 5%;
+    .hych-text {
+        @include third-font(1rem, 700);
+        color: $mustardYellow;
+        letter-spacing: 0.2rem;
+        margin-bottom: 20px;
+    }
+    .hych-heading-text {
+        @include primary-font(2.3rem, 700);
+        color: $darkGreen;
+        line-height: 3.2rem;
+        padding-bottom: 5%;
+        span {
+            border-bottom: 3px solid $mustardYellow;
+            font-size: 2.3rem;
+        }
+    }
+    .hych-content {
+        @include flex(flex-start, flex-start, column);
+        width: 100%;
+        .hych-content-section {
+            @include flex(flex-start, flex-start, column);
+            width: 80%;
+            padding-bottom: 5%;
+            .hych-section-title {
+                @include primary-font(1.1rem, 700);
+                color: $darkGreen;
+                margin-bottom: 15px;
+                span {
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    margin-right: 30px;
+                }
+            }
+            .hych-description {
+                @include secondary-font(0.8rem, 400);
+                    color: #7e908a;
+                    line-height: 1.2rem;
+            }
+        }
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+    .how-you-can-help {
+        .hych-text {
+            margin-bottom: 10px;
+        }
+        .hych-heading-text {
+            padding-bottom: 8%;
+        }
+        .hych-content {
+            .hych-content-section {
+                width: 100%;
+               .hych-section-title {
+                font-size: 1.3rem;
+               }
+               .hych-description {
+                   font-size: 0.9rem;
+               }
+            }
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .how-you-can-help {
+        padding-left: 0;
+        width: 100%;
+        .hych-text {
+            margin-bottom: 10px;
+        }
+        .hych-heading-text {
+            font-size: 2.2rem; 
+            span {
+                font-size: 2.2rem;
+            }
+            padding-bottom: 8%;
+        }
+        .hych-content {
+            .hych-content-section {
+                width: 100%;
+               .hych-section-title {
+                font-size: 1.3rem;
+               }
+               .hych-description {
+                   font-size: 0.9rem;
+                   line-height: 1.3rem;
+               }
+            }
+        }
+    }
+}

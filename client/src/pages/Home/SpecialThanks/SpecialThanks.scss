@@ -1,0 +1,65 @@
+@import '../../../config';
+
+.special-thanks {
+    @include flex(center, flex-start, column);
+    width: 100%;
+    padding: 5% 10%;
+    .special-text {
+        @include primary-font(2.3rem, 700);
+        color: $darkGreen;
+        line-height: 3.2rem;
+        margin-bottom: 5%;
+        span {
+            font-size: 2.3rem;
+            line-height: 3.2rem;
+            border-bottom: 3px solid $mustardYellow;
+        }
+    }
+    .logo-container {
+        @include flex(center, space-between, row);
+        .logo-wrapper {
+            @include flex(flex-end, center, row);
+            width: 25%;
+            img {
+                width: 100%;
+            }
+
+            h1 {
+                @include third-font(2.5rem, 700);
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+    .special-thanks {
+        padding: 10% 10% 15% 10%;
+        .special-text {
+
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .special-thanks {
+        padding: 10% 10% 15% 10%;
+        .special-text {
+            margin-bottom: 10%;
+            font-size: 2.2rem;
+            span {
+                font-size: 2.2rem;
+                display: block;
+            }
+        }
+        .logo-container {
+            flex-direction: column;
+            .logo-wrapper {
+                width: 60%;
+                height: auto;
+                margin-bottom: 10%;
+            }
+        }
+    }
+}

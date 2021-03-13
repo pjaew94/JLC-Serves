@@ -1,0 +1,50 @@
+@import '../../../config';
+
+.contribute {
+    @include flex(flex-start, flex-start, column);
+    padding: 0% 10% 5% 10%;
+    background: $softWhite;
+    width: 100%;
+    .contribute-text {
+        width: 50%;
+        @include primary-font(2.3rem, 700);
+        color: $darkGreen;
+        line-height: 3.2rem;
+        margin-bottom: 2%;
+    }
+    .donate-link {
+        @include secondary-font(1.3rem, 700);
+        color: $softWhite;
+        border: 1px solid $mustardYellow;
+        background: $mustardYellow;
+        padding: 30px 40px;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+            background: $softWhite;
+            color: $mustardYellow;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {
+    .contribute {
+        align-items: center;
+        padding-bottom: 10%;
+        .contribute-text {
+            width: auto;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .contribute {
+        padding: 10% 10% 15% 10%;
+        .contribute-text {
+            width: 100%;
+            font-size: 2rem;
+        }
+    }
+}

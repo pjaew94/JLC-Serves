@@ -5,4 +5,24 @@
     height: auto;
     min-height: 100vh;
     width: 100vw;
+    .what-we-do-and-how-we-can-help {
+        @include flex(flex-start, space-between, row);
+        width: 100vw;
+        padding: 5% 10%;
+        background: $softWhite;
+        
+
+
+    }
+}
+
+
+@media only screen
+and (min-device-width: 280px)
+and (max-device-width: 767px) {
+    .home {
+        .what-we-do-and-how-we-can-help {
+            @include flex(flex-start, space-between, column);
+        }
+    }
 }
