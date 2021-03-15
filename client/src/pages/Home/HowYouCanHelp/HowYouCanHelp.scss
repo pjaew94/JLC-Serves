@@ -5,19 +5,19 @@
     width: 50%;
     padding-left: 5%;
     .hych-text {
-        @include third-font(1rem, 700);
+        @include third-font($heading2, 700);
         color: $mustardYellow;
         letter-spacing: 0.2rem;
         margin-bottom: 20px;
     }
     .hych-heading-text {
-        @include primary-font(2.3rem, 700);
+        @include primary-font($heading1, 700);
         color: $darkGreen;
         line-height: 3.2rem;
         padding-bottom: 5%;
         span {
             border-bottom: 3px solid $mustardYellow;
-            font-size: 2.3rem;
+            font-size: $heading1;
         }
     }
     .hych-content {
@@ -28,7 +28,7 @@
             width: 80%;
             padding-bottom: 5%;
             .hych-section-title {
-                @include primary-font(1.1rem, 700);
+                @include primary-font($subHeading, 700);
                 color: $darkGreen;
                 margin-bottom: 15px;
                 span {
@@ -38,13 +38,73 @@
                 }
             }
             .hych-description {
-                @include secondary-font(0.8rem, 400);
+                @include secondary-font($description2, 400);
                     color: #7e908a;
-                    line-height: 1.2rem;
+                    line-height: 1.4rem;
             }
         }
     }
 }
+
+
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .how-you-can-help {
+        .hych-text {
+            font-size: $heading2 * 2.4;
+        }
+        .hych-heading-text {
+            font-size: $heading1 * 2.4;
+            line-height: 3.2rem * 2.4;
+            span {
+                font-size: $heading1 * 2.4;
+            }
+        }
+        .hych-content {
+            .hych-content-section {
+                .hych-section-title {
+                    font-size: $subHeading * 2.4;
+                    span {
+                        font-size: $subHeading * 2.4;
+                    }
+                }
+                .hych-description {
+                    font-size: $description2 * 2.4;
+                    line-height: 1.6rem * 2.4;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .how-you-can-help  {
+        .hych-text {
+            font-size: $heading2 * 1.8;
+        }
+        .hych-heading-text {
+            font-size: $heading1 * 1.8;
+            line-height: 3.2rem * 1.8;
+            span {
+                font-size: $heading1 * 1.8;
+            }
+        }
+        .hych-content {
+            .hych-content-section {
+                .hych-section-title {
+                    font-size: $subHeading * 1.8;
+                    span {
+                        font-size: $subHeading * 1.8;
+                    }
+                }
+                .hych-description {
+                    font-size: $description * 1.8;
+                    line-height: 1.6rem * 1.8;
+                }
+            }
+        }
+    }
+}
+
 
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {

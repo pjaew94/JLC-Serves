@@ -1,13 +1,12 @@
 @import '../../../config';
 
 .contribute {
-    @include flex(flex-start, flex-start, column);
+    @include flex(center, flex-start, column);
     padding: 0% 10% 5% 10%;
     background: $softWhite;
     width: 100%;
     .contribute-text {
-        width: 50%;
-        @include primary-font(2.3rem, 700);
+        @include primary-font($heading1, 700);
         color: $darkGreen;
         line-height: 3.2rem;
         margin-bottom: 2%;
@@ -22,6 +21,32 @@
         &:hover {
             background: $softWhite;
             color: $mustardYellow;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .contribute {
+        .contribute-text {
+            font-size: $heading1 * 2.4;
+            margin-bottom: 2% * 2.4;
+        }
+        .donate-link {
+            font-size: 1.7rem * 2.4;
+            padding: 100px 150px;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .contribute {
+        .contribute-text {
+            font-size: $heading1 * 1.8;
+            margin-bottom: 2% * 1.8;
+        }
+        .donate-link {
+            font-size: 1.7rem * 1.8;
+            padding: 75px 110px;
         }
     }
 }

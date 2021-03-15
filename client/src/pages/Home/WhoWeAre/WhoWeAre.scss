@@ -28,18 +28,18 @@
             padding-bottom: 7%;
             .who-we-are-text {
                 @include flex(flex-start, flex-start, row);
-                @include third-font(1rem, 700);
+                @include third-font($heading2, 700);
                 color: $mustardYellow;
                 letter-spacing: 0.2rem;
                 margin-bottom: 20px;
             }
             .we-are {
-                @include primary-font(2.3rem, 700);
+                @include primary-font($heading1, 700);
                 line-height: 3.2rem;
                 color: $darkGreen;
                 span {
                     border-bottom: 3px solid $mustardYellow;
-                    font-size: 2.3rem;
+                    font-size: $heading1;
                 }
             }
         }
@@ -51,24 +51,24 @@
                 width: 100%;
                 padding: 5% 0;
                 .subheading {
-                    @include primary-font(1.1rem, 700);
+                    @include primary-font($subHeading, 700);
                     color: $darkGreen;
                     margin-bottom: 15px;
                     span {
-                        font-size: 1.1rem;
+                        font-size: $subHeading;
                         margin-right: 30px;
                     }
                 }
                 .text {
-                    @include secondary-font(0.8rem, 400);
+                    @include secondary-font($description2, 400);
                     color: #7e908a;
-                    line-height: 1.2rem;
+                    line-height: 1.4rem;
                 }
 
                 .bible-verse {
-                    @include secondary-font(0.8rem, 400);
+                    @include secondary-font($description2, 400);
                     color: #7e908a;
-                    line-height: 1.2rem;
+                    line-height: 1.4rem;
                     font-style: italic;
                     margin-top: 15px;
                 }
@@ -84,6 +84,84 @@
         }
         .content {
             height: 120vh;
+        }
+    }
+}
+
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .who-we-are {
+        .content {
+            .top {
+                .who-we-are-text {
+                    font-size: $heading2 * 2.4;
+                }
+                .we-are {
+                    font-size: $heading1 * 2.4;
+                    line-height: 3.2rem * 2.4;
+                    span {
+                        font-size: $heading1 * 2.4;
+                    }
+                }
+            }
+            .middle {
+                .middle-card {
+                    .subheading {
+                        font-size: $subHeading * 2.4;
+                        span {
+                            font-size: $subHeading * 2.4;
+                        }
+                    }
+                    .text {
+                        font-size: $description2 * 2.4;
+                        line-height: 1.4rem * 2.4;
+                    }
+
+                    .bible-verse {
+                        font-size: $description2 * 2.4;
+                        line-height: 1.4rem * 2.4;
+                        margin-top: 15px * 2.4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .who-we-are {
+        .content {
+            .top {
+                .who-we-are-text {
+                    font-size: $heading2 * 1.8;
+                }
+                .we-are {
+                    font-size: $heading1 * 1.8;
+                    line-height: 3.2rem * 1.8;
+                    span {
+                        font-size: $heading1 * 1.8;
+                    }
+                }
+            }
+            .middle {
+                .middle-card {
+                    .subheading {
+                        font-size: $subHeading * 1.8;
+                        span {
+                            font-size: $subHeading * 2.4;
+                        }
+                    }
+                    .text {
+                        font-size: $description2 * 1.8;
+                        line-height: 1.4rem * 1.8;
+                    }
+
+                    .bible-verse {
+                        font-size: $description2 * 1.8;
+                        line-height: 1.4rem * 1.8;
+                        margin-top: 15px * 1.8;
+                    }
+                }
+            }
         }
     }
 }

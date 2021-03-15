@@ -13,20 +13,19 @@
             width: 50%;
             height: 100%;
             @include flex(flex-start, center, column);
-            padding:  5% 5% 5% 12%;
+            padding: 5% 5% 5% 12%;
             .number {
-              
-                @include primary-font(2.5rem, 700);
+                @include primary-font(3rem, 700);
                 color: $mustardYellow;
                 margin-bottom: 10px;
             }
             .description {
                 height: 50%;
                 width: 80%;
-                @include secondary-font(0.8rem, 400);
+                @include secondary-font($description2, 400);
                 color: $darkGreen;
                 span {
-                    @include secondary-font(0.8rem, 700);
+                    @include secondary-font($description2, 700);
                 }
             }
         }
@@ -70,13 +69,70 @@
     .right-bottom-container {
         @include flex(center, flex-start, row);
     }
-
 }
 
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .achievements {
+        .achievements-subcontainer {
+            .achievement {
+                .number {
+                    font-size: 3rem * 2.4;
+                }
+                .description {
+                    font-size: $description2 * 2.4;
+                    span {
+                        font-size: $description2 * 2.4;
+                    }
+                }
+            }
 
-@media only screen
-and (min-device-width: 1280px)
-and (max-device-width: 1480px) {
+            .border-top {
+                width: 150px;
+            }
+            .border-left {
+                height: 250px;
+            }
+            .border-bottom {
+                width: 150px;
+            }
+            .border-right {
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .achievements {
+        .achievements-subcontainer {
+            .achievement {
+                .number {
+                    font-size: 3rem * 1.8;
+                }
+                .description {
+                    font-size: $description2 * 1.8;
+                    span {
+                        font-size: $description2 * 1.8;
+                    }
+                }
+            }
+
+            .border-top {
+                width: 100px;
+            }
+            .border-left {
+                height: 150px;
+            }
+            .border-bottom {
+                width: 100px;
+            }
+            .border-right {
+                height: 150px;
+            }
+        }
+    }
+}
+@media only screen and (min-device-width: 1280px) and (max-device-width: 1480px) {
     .achievements {
         height: 35vh;
         .achievements-subcontainer {
@@ -92,9 +148,7 @@ and (max-device-width: 1480px) {
     }
 }
 
-@media only screen
-and (min-device-width: 1080px)
-and (max-device-width: 1280px) {
+@media only screen and (min-device-width: 1080px) and (max-device-width: 1280px) {
     .achievements {
         height: 32vh;
         .achievements-subcontainer {
@@ -103,7 +157,7 @@ and (max-device-width: 1280px) {
                     font-size: 2.2rem;
                 }
                 .description {
-                    font-size: 0.8rem;
+                    font-size: $description2;
                     width: 100%;
                 }
             }
@@ -111,9 +165,7 @@ and (max-device-width: 1280px) {
     }
 }
 
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1080px) {
+@media only screen and (min-device-width: 768px) and (max-device-width: 1080px) {
     .achievements {
         height: 25vh;
         .achievements-subcontainer {
@@ -122,22 +174,28 @@ and (max-device-width: 1080px) {
                 padding: 5% 5%;
                 .number {
                     font-size: 2.2rem;
-                   
                 }
                 .description {
-                    font-size: 0.8rem;
+                    font-size: $description;
                     width: 100%;
-                    height:40%;
+                    height: 40%;
+
+                    span {
+                        font-size: $description;
+                    }
                 }
+            }
+            .border-top,
+            .border-bottom,
+            .border-right,
+            .border-left {
+                display: none;
             }
         }
     }
 }
 
-
-@media only screen
-and (min-device-width: 280px)
-and (max-device-width: 767px) {
+@media only screen and (min-device-width: 280px) and (max-device-width: 767px) {
     .achievements {
         flex-direction: column;
         height: 50vh;

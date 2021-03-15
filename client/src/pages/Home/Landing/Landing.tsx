@@ -15,7 +15,22 @@ const landingImgs = [
 
 const Landing: React.FC = () => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 767px)",
+    maxWidth: 767,
+  });
+
+  const isDesktop = useMediaQuery({
+    minWidth: 768,
+    maxWidth: 2500,
+  });
+
+  const isRetinaDisplay = useMediaQuery({
+    minWidth: 2500,
+    maxWidth: 3500,
+  });
+
+  const is4k = useMediaQuery({
+    minWidth: 3000,
+    maxWidth: 4000,
   });
 
   const Photo = isMobile
@@ -47,6 +62,35 @@ const Landing: React.FC = () => {
         transform: translateY(100px);
       `;
 
+  const RetinaPhoto1 = styled.img`
+    width: 1100px;
+    object-fit: cover;
+    margin-right: 70px;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+  `;
+
+  const RetinaPhoto2 = styled.img`
+    width: 1100px;
+    object-fit: cover;
+    margin-right: 70px;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(150px);
+  `;
+
+  const FourKPhoto1 = styled.img`
+    width: 1500px;
+    object-fit: cover;
+    margin-right: 90px;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+  `;
+  const FourKPhoto2 = styled.img`
+    width: 1500px;
+    object-fit: cover;
+    margin-right: 90px;
+    box-shadow: 0 7px 20px 0 rgba(0, 0, 0, 0.12);
+    transform: translateY(220px);
+  `;
+
   return (
     <>
       <div className="landing">
@@ -77,21 +121,58 @@ const Landing: React.FC = () => {
       </div>
 
       <div className="marquee-slider">
-        <Marquee
-          velocity={isMobile ? 10 : 20}
-          direction={"rtl"}
-          scatterRandomly={false}
-          resetAfterTries={100}
-          onInit={(): void => {}}
-          onFinish={(): void => {}}
-        >
-          <Photo src={landingImgs[0]} />
-          <Photo2 src={landingImgs[1]} />
-          <Photo src={landingImgs[2]} />
-          <Photo2 src={landingImgs[3]} />
-          <Photo src={landingImgs[4]} />
-          <Photo2 src={landingImgs[5]} />
-        </Marquee>
+        {isMobile || isDesktop ? (
+          <Marquee
+            velocity={isMobile ? 10 : 20}
+            direction={"rtl"}
+            scatterRandomly={false}
+            resetAfterTries={100}
+            onInit={(): void => {}}
+            onFinish={(): void => {}}
+          >
+            <Photo src={landingImgs[0]} />
+            <Photo2 src={landingImgs[1]} />
+            <Photo src={landingImgs[2]} />
+            <Photo2 src={landingImgs[3]} />
+            <Photo src={landingImgs[4]} />
+            <Photo2 src={landingImgs[5]} />
+          </Marquee>
+        ) : null}
+
+        {isRetinaDisplay && (
+          <Marquee
+            velocity={30}
+            direction={"rtl"}
+            scatterRandomly={false}
+            resetAfterTries={100}
+            onInit={(): void => {}}
+            onFinish={(): void => {}}
+          >
+            <RetinaPhoto1 src={landingImgs[0]} />
+            <RetinaPhoto2 src={landingImgs[1]} />
+            <RetinaPhoto1 src={landingImgs[2]} />
+            <RetinaPhoto2 src={landingImgs[3]} />
+            <RetinaPhoto1 src={landingImgs[4]} />
+            <RetinaPhoto2 src={landingImgs[5]} />
+          </Marquee>
+        )}
+        {is4k && (
+          <Marquee
+            velocity={30}
+            direction={"rtl"}
+            scatterRandomly={false}
+            resetAfterTries={100}
+            onInit={(): void => {}}
+            onFinish={(): void => {}}
+          >
+            <FourKPhoto1 src={landingImgs[0]} />
+            <FourKPhoto2 src={landingImgs[1]} />
+            <FourKPhoto1 src={landingImgs[2]} />
+            <FourKPhoto2 src={landingImgs[3]} />
+            <FourKPhoto1 src={landingImgs[4]} />
+            <FourKPhoto2 src={landingImgs[5]} />
+          </Marquee>
+        )}
       </div>
     </>
   );

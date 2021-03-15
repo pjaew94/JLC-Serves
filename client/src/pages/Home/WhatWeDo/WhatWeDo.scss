@@ -5,19 +5,19 @@
     width: 50%;
     padding-right: 2%;
     .wwd-text {
-        @include third-font(1rem, 700);
+        @include third-font($heading2, 700);
         color: $mustardYellow;
         letter-spacing: 0.2rem;
         margin-bottom: 20px;
     }
     .wwd-heading-text {
-        @include primary-font(2.3rem, 700);
+        @include primary-font($heading1, 700);
         color: $darkGreen;
         line-height: 3.2rem;
         padding-bottom: 5%;
         span {
             border-bottom: 3px solid $mustardYellow;
-            font-size: 2.3rem;
+            font-size: $heading1;
         }
     }
     
@@ -29,7 +29,7 @@
             width: 80%;
             padding-bottom: 5%;
             .wwd-section-title {
-                @include primary-font(1.1rem, 700);
+                @include primary-font($subHeading, 700);
                 color: $darkGreen;
                 margin-bottom: 15px;
                 span {
@@ -39,9 +39,67 @@
                 }
             }
             .wwd-description {
-                @include secondary-font(0.8rem, 400);
+                @include secondary-font($description2, 400);
                     color: #7e908a;
-                    line-height: 1.2rem;
+                    line-height: 1.4rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .what-we-do {
+        .wwd-text {
+            font-size: $heading2 * 2.4;
+        }
+        .wwd-heading-text {
+            font-size: $heading1 * 2.4;
+            line-height: 3.2rem * 2.4;
+            span {
+                font-size: $heading1 * 2.4;
+            }
+        }
+        .wwd-content {
+            .wwd-content-section {
+                .wwd-section-title {
+                    font-size: $subHeading * 2.4;
+                    span {
+                        font-size: $subHeading * 2.4;
+                    }
+                }
+                .wwd-description {
+                    font-size: $description2 * 2.4;
+                    line-height: 1.6rem * 2.4;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .what-we-do {
+        .wwd-text {
+            font-size: $heading2 * 1.8;
+        }
+        .wwd-heading-text {
+            font-size: $heading1 * 1.8;
+            line-height: 3.2rem * 1.8;
+            span {
+                font-size: $heading1 * 1.8;
+            }
+        }
+        .wwd-content {
+            .wwd-content-section {
+                .wwd-section-title {
+                    font-size: $subHeading * 1.8;
+                    span {
+                        font-size: $subHeading * 1.8;
+                    }
+                }
+                .wwd-description {
+                    font-size: $description2 * 1.8;
+                    line-height: 1.6rem * 1.8;
+                }
             }
         }
     }

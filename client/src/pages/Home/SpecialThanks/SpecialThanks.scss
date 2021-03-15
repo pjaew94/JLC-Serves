@@ -5,12 +5,12 @@
     width: 100%;
     padding: 5% 10%;
     .special-text {
-        @include primary-font(2.3rem, 700);
+        @include primary-font($heading1, 700);
         color: $darkGreen;
         line-height: 3.2rem;
         margin-bottom: 5%;
         span {
-            font-size: 2.3rem;
+            font-size: $heading1;
             line-height: 3.2rem;
             border-bottom: 3px solid $mustardYellow;
         }
@@ -26,6 +26,28 @@
 
             h1 {
                 @include third-font(2.5rem, 700);
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 3000px) and (max-device-width: 4000px) {
+    .special-thanks {
+        .special-text {
+            font-size: $heading1 * 2.4;
+            span {
+                font-size: $heading1 * 2.4;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 2500px) and (max-device-width: 3000px) {
+    .special-thanks {
+        .special-text {
+            font-size: $heading1 * 1.8;
+            span {
+                font-size: $heading1 * 1.8;
             }
         }
     }
