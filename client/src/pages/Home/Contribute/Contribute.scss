@@ -41,6 +41,7 @@
 and (min-device-width: 280px)
 and (max-device-width: 767px) {
     .contribute {
+        align-items: center;
         padding: 10% 10% 15% 10%;
         .contribute-text {
             width: 100%;
