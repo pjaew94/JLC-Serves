@@ -1,11 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { config } = require('dotenv');
-config({path: __dirname + '../config/.env'});
+const config = require('config');
 
-const stripe = require("stripe")(
-  process.env.STRIPE_KEY
-);
+const stripe = config.get('STRIPE_KEY')
 
 router.post("/create-donation-session", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
