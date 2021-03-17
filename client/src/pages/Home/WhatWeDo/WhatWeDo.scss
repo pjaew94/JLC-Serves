@@ -4,6 +4,7 @@
     @include flex(flex-start, flex-start, column);
     width: 50%;
     padding-right: 2%;
+    
     .wwd-text {
         @include third-font($heading2, 700);
         color: $mustardYellow;

@@ -1,0 +1,58 @@
+@import '../../config';
+
+.success {
+    height: 100vh;
+    width: 100vw;
+    @include flex(center, center, column);
+    background: $softWhite;
+    .success-content {
+        @include flex(flex-start, flex-start, column);
+        padding: 4% 5%;
+        width: 35%;
+        min-width: 700px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        .thank-you {
+            @include primary-font(2.4rem, 700);
+            line-height: 3.5rem;
+            color: $darkGreen;
+            margin-bottom: 10%;
+            span {
+                font-size: 2.4rem;
+                border-bottom: 3px solid $mustardYellow;
+            }
+        }
+        .success-links {
+            width: 100%;
+            @include flex(center, space-between, row);
+   
+            .link {
+                @include flex(center, center, row);
+                @include secondary-font($heading2, 700);
+              
+                color: $softWhite;
+                width: 200px;
+                height: 120px;
+                transition: 0.3s all ease-in-out;
+                &:hover {
+                    background: $softWhite
+                }   
+            }
+            .home-link {
+                background: $darkGreen;
+                border: 2px solid $darkGreen;
+   
+                &:hover {
+                    color: $darkGreen;
+                }
+            }
+            .donations-link {
+                background: $mustardYellow;
+                border: 2px solid $mustardYellow;
+  
+                &:hover {
+                    color: $mustardYellow;
+                }
+            }
+        }
+    }
+}

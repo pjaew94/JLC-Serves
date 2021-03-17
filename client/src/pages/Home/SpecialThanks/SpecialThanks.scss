@@ -4,6 +4,7 @@
     @include flex(center, flex-start, column);
     width: 100%;
     padding: 5% 10%;
+    
     .special-text {
         @include primary-font($heading1, 700);
         color: $darkGreen;

@@ -4,6 +4,7 @@
     @include flex(flex-start, flex-start, column);
     width: 50%;
     padding-left: 5%;
+    
     .hych-text {
         @include third-font($heading2, 700);
         color: $mustardYellow;

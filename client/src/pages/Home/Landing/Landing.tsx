@@ -121,6 +121,7 @@ const Landing: React.FC = () => {
       </div>
 
       <div className="marquee-slider">
+
         {isMobile || isDesktop ? (
           <Marquee
             velocity={isMobile ? 10 : 20}
@@ -138,7 +139,6 @@ const Landing: React.FC = () => {
             <Photo2 src={landingImgs[5]} />
           </Marquee>
         ) : null}
-
         {isRetinaDisplay && (
           <Marquee
             velocity={30}

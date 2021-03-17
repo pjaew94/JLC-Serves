@@ -3,6 +3,7 @@ const router = express.Router();
 const { body, validationResult } = require("express-validator");
 const auth = require("../middleware/auth");
 
+
 const User = require("../models/User");
 const Donation = require("../models/Donation");
 
@@ -33,12 +34,13 @@ router.post(
     try {
       const { amount, donator, message, location } = req.body;
 
+
       const newDonation = new Donation({
         amount,
         donator,
         message,
         location,
-        comment: [],
+        comment: []
       });
 
       const donation = await newDonation.save();

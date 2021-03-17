@@ -6,9 +6,12 @@
     width: 100%;
     padding: 4% 10% 4% 10%;
     background: $darkGreen;
+
     .top {
         @include flex(flex-end, space-between, row);
         width: 100%;
+        z-index: 2;
+        background: transparent;
         .title {
             @include primary-font(1.5rem, 400);
             color: white;
@@ -24,6 +27,8 @@
         @include flex(flex-start, space-between, column);
         width: 100%;
         padding: 4% 0;
+        z-index: 2;
+        background: transparent;
         .verse-block {
             @include flex(flex-start, space-between, column);
             .verse-line1,
@@ -74,6 +79,8 @@
     background: $darkGreen;
     border: none;
     outline: none;
+    z-index: 2;
+
 }
 
 @media only screen and (max-device-height: 800px) {

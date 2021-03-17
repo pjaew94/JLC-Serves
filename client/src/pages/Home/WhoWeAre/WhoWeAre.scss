@@ -6,6 +6,7 @@
     width: 100vw;
     padding: 2% 10% 3% 10%;
     background: $softWhite;
+    
 
     .img-container {
         width: 50%;
@@ -230,8 +231,9 @@ and (max-device-width: 767px) {
                 }
             }
             .middle {
-                width: 80%;
+                width: 100%;
                 .middle-card {
+                    width: 100%;
                     .subheading {
                         font-size: 1.3rem;
                     }

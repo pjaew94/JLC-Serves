@@ -5,6 +5,7 @@
     padding: 0% 10% 5% 10%;
     background: $softWhite;
     width: 100%;
+    
     .contribute-text {
         @include primary-font($heading1, 700);
         color: $darkGreen;
